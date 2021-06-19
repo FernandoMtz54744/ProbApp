@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+/*https://colorlib.com/wp/css3-table-templates/*/
+body{
+    background-color: #7b1fa2;
+    font-family: 'Rubik', sans-serif;
+}
+
+header{
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    text-align: center;
+    padding: 0.2rem;
+}
+
+table{
+    border-radius: 5px;
+    text-align: center;
+    border-collapse: collapse;
+    background-color: #e0e0e0;
+}
+
+.tHeader, th{
+    color: whitesmoke;
+    background-color: #6a0080;
+    margin: 0px;
+}
+
+
+td{
+    border-radius: 5px;
+    text-align: center;
+    padding: 0.2rem;
+}
+
+.preguntas{
+    padding: 0.5rem;
+    text-align: justify;
+}
+
