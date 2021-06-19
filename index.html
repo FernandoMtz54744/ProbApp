@@ -12,34 +12,26 @@
     <header>
         <h1>App de proba</h1>
     </header>
-
-    <section>
-        <h2>Instrucciones</h2>
-    </section>
-
     <main>
         <form action="" id="formulario">
-            
         </form>
         <div id="resultados">   
             <div id="datosUsuario">
                 <!--Se despliega la probabiliad del usuario y recomendaciones-->
             </div>
-            <!-- <canvas id="myChart" width="400" height="400"> -->
-                <!--Se despliegan las graficas obtenidas en la investigacion-->
-            <!-- </canvas> -->
+            <!-- Se despliega la grafica -->
+            <h3>Estos datos se obtuvieron en nuestra investigación, selecciona una grafica para visualizarla</h3>
+            <div class="chart-selector" id="chartSelector">
+            </div>
+            <h4 id="preguntaChart">Me conecto a las redes sociales por lo menos una vez al día.</h4>
+            <div class="center">
+                <div class="chart-container">
+                    <canvas id="chart"></canvas>
+                </div>
+            </div>
+            <!-- Boton para regresar -->
             <button onClick="createForm()">Regresar</button>`
         </div>
-
-        <!-- Solo para probar graficas, esto debe ir dentro de resultados -->
-        <h3>Estos datos se obtuvieron en nuestra investigación</h3>
-        <div class="chart-selector" id="chartSelector">
-        </div>
-        <div class="chart-container">   
-                <canvas id="chart"></canvas>
-        </div>
-          
-     
     </main>
     <script src="script.js"></script>
     <script src="graficas.js"></script>

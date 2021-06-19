@@ -23,24 +23,27 @@ const datosUsuairio = document.getElementById("datosUsuario");
 function createForm(){
     form.style.display="";
     resulatdosDiv.style.display="none";
-    let html = `<table><tr class="tHeader"><th>Totalmente en desacuerdo</th><th>En desacuerdo</th><th>Ni de acuerdo ni en desacuerdo</th>
+    let html = `<h2>Instrucciones: Contesta la siguiente serie de preguntas seleccionando la opción que mejor te parezca.</h2>
+    <table><tr class="tHeader"><th>Pregunta</th><th>Totalmente en desacuerdo</th><th>En desacuerdo</th><th>Ni de acuerdo ni en desacuerdo</th>
                 <th>De acuerdo</th><th>Totalmente de acuerdo</th>
     </tr>`;
     for(let i=1; i<=15; i++){
         html+=`<tr><td class="preguntas">${preguntas[i-1]}</td>`;
-        for(let j=1; j<=4; j++){
-                html+=`<td><input type="radio" name="p${i}" id="p${i}o${j}"></td>`;
+        for(let j=1; j<=5; j++){
+                html+=`<td><input type="radio" name="p${i}" id="p${i}o${j}" /></td>`;
         }
         html+=`</tr>`;
     }
     html+=`</table>
-    <input type="submit" value="Enviar"/>`
+    <div class="sendContainer">
+    <input type="submit" value="Enviar"/>
+    </div>`
     form.innerHTML=html;
 }
 
 const validarRespuestas = ()=>{
     for(let i=1; i<=15; i++){
-        for(let j=1; j<=4; j++){
+        for(let j=1; j<=5; j++){
             if(document.getElementById(`p${i}o${j}`).checked){
                 respuestas[i-1]=j;
             }

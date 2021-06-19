@@ -16,7 +16,7 @@ const titulosGrafica = ["Me conecto a las redes sociales por lo menos una vez al
 "Tengo por lo menos un amigo/a cercano/a fuera de las redes sociales en el que pueda confiar y quedar para reunirnos en persona y conversar."];
 
 const etiquetas = ['Totalmente de acuerdo','De acuerdo','Ni de acuerdo ni en desacuerdo','En desacuerdo','Totalmente en desacuerdo'];
-const colores = ['rgb(255, 99, 132)','rgb(54, 162, 235)','rgb(255, 205, 86)', 'rgb(255, 205, 0)','rgb(0, 205, 86)'];
+const colores = ['rgb(255, 99, 132)','rgb(54, 162, 235)','rgb(255, 112, 67)', 'rgb(255, 205, 0)','rgb(0, 188, 212)'];
 const datos = [
     [21,8,4,1,0], //Pregunta 1
     [10,10,6,6,2], //Pregunta 2
@@ -77,6 +77,7 @@ initGrafica();
 
 //Funcion para actualizar los datos de la grafica
 function updateChart(i){
+    document.getElementById("preguntaChart").innerHTML = titulosGrafica[i];
     currentChart.data.datasets[0].data = datos[i];
     currentChart.update();
     

@@ -1,23 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 /*https://colorlib.com/wp/css3-table-templates/*/
 body{
-    background-color: #7b1fa2;
+    background-color: #f3e5f5;
     font-family: 'Rubik', sans-serif;
 }
 
 header{
-    background-color: #e0e0e0;
+    background-color: #6a0080;
     border-radius: 5px;
     text-align: center;
     padding: 0.2rem;
+    color: whitesmoke;
 }
 
 table{
     border-radius: 5px;
     text-align: center;
     border-collapse: collapse;
-    background-color: #e0e0e0;
+    background-color: #ce93d8;
 }
+
+form{
+    padding: 0rem 3rem 0rem 3rem;
+}
+
 
 .tHeader, th{
     color: whitesmoke;
@@ -50,4 +56,37 @@ td{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+button, input[type="submit"]{
+    background-color: #6a0080;
+    color: whitesmoke;
+    border: none;
+    padding: 1rem;
+    font-family: inherit;
+    border-radius: 5px;
+}
+
+input[type="submit"]{
+    margin-top: 2rem;
+    width: 80%;
+}
+.sendContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+button:hover, input[type="submit"]:hover{
+    background-color: #4a0072;
+    cursor: pointer;
+}
+
+#preguntaChart, h3{
+    text-align: center;
+}
+
+.center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
