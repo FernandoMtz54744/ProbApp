@@ -38,6 +38,16 @@ td{
 }
 
 .chart-container {
+    height: 400px;
     width: 400px;
-    height:400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.chart-selector{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
