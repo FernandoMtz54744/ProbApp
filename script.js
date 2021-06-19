@@ -1,4 +1,3 @@
-const form = document.getElementById("formulario");
 const preguntas = ["Me conecto a las redes sociales por lo menos una vez al día.", 
 "Paso mucho tiempo en las redes sociales donde comparto mi vida personal o me entero de la vida personal de otras personas (Facebook, Instagram, etc.).",
 "Paso mucho tiempo en las redes sociales de contenido multimedia (YouTube, TikTok, etc.).",
@@ -15,11 +14,18 @@ const preguntas = ["Me conecto a las redes sociales por lo menos una vez al día
 "He desarrollado vínculos afectivos fuertes con las personas fuera de las redes sociales (familia, amigos, pareja, etc.).",
 "Tengo por lo menos un amigo/a cercano/a fuera de las redes sociales en el que pueda confiar y quedar para reunirnos en persona y conversar."];
 
-const opciones = ["Totalmente de acuerdo", "De acuerdo", "Ni de acuerdo ni en desacuerdo", "En desacuerdo", "Totalmente en desacuerdo"];
+// const opciones = ["Totalmente de acuerdo", "De acuerdo", "Ni de acuerdo ni en desacuerdo", "En desacuerdo", "Totalmente en desacuerdo"]; 
+const form = document.getElementById("formulario");
+const respuestas=[];
+const resulatdosDiv = document.getElementById("resultados");
+const datosUsuairio = document.getElementById("datosUsuario");
 
 function createForm(){
-    let html = `<table><tr class="tHeader"><th>Totalmente de acuerdo</th><th>De acuerdo</th>
-    <th>Ni de acuerdo ni en desacuerdo</th><th>En desacuerdo</th><th>Totalmente en desacuerdo</th></tr>`;
+    form.style.display="";
+    resulatdosDiv.style.display="none";
+    let html = `<table><tr class="tHeader"><th>Totalmente en desacuerdo</th><th>En desacuerdo</th><th>Ni de acuerdo ni en desacuerdo</th>
+                <th>De acuerdo</th><th>Totalmente de acuerdo</th>
+    </tr>`;
     for(let i=1; i<=15; i++){
         html+=`<tr><td class="preguntas">${preguntas[i-1]}</td>`;
         for(let j=1; j<=4; j++){
@@ -27,5 +33,39 @@ function createForm(){
         }
         html+=`</tr>`;
     }
+    html+=`</table>
+    <input type="submit" value="Enviar"/>`
     form.innerHTML=html;
 }
+
+const validarRespuestas = ()=>{
+    for(let i=1; i<=15; i++){
+        for(let j=1; j<=4; j++){
+            if(document.getElementById(`p${i}o${j}`).checked){
+                respuestas[i-1]=j;
+            }
+        }
+    }
+    return respuestas.length;
+}
+
+const imprimirRespuestas = ()=>{
+    respuestas.map((value, i) => {
+        console.log(`P${i+1}: ${value}`);
+    })
+} 
+
+form.addEventListener('submit', (event)=>{
+    event.preventDefault();
+    if(validarRespuestas() === 15){
+        imprimirRespuestas();
+        //Se oculta el formulario y se muestran los resulatdos o gráficas
+        form.style.display="none"; 
+        resulatdosDiv.style.display="";
+        let html = `<h2>Tu probabilidad es: X</h2>`;
+        datosUsuairio.innerHTML=html;
+
+    }else{
+        alert("Favor de contestar todas las respuestas");
+    }
+});

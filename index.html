@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
-    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
     <title>Aplicación de Proba</title>
 </head>
 <body onload="createForm()">
@@ -21,8 +21,23 @@
         <form action="" id="formulario">
             
         </form>
-    </main>
+        <div id="resultados">   
+            <div id="datosUsuario">
+                <!--Se despliega la probabiliad del usuario y recomendaciones-->
+            </div>
+            <!-- <canvas id="myChart" width="400" height="400"> -->
+                <!--Se despliegan las graficas obtenidas en la investigacion-->
+            <!-- </canvas> -->
+            <button onClick="createForm()">Regresar</button>`
+        </div>
 
+        <!-- Solo para probar graficas, esto debe ir dentro de resultados -->
+        <div class="chart-container">
+            <h3>Estos datos se obtuvieron en nuestra investigación</h3>
+            <canvas id="myChart"></canvas>
+        </div>
+    </main>
     <script src="script.js"></script>
+    <script src="graficas.js"></script>
 </body>
 </html>

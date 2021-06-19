@@ -37,3 +37,7 @@ td{
     text-align: justify;
 }
 
+.chart-container {
+    width: 400px;
+    height:400px;
+}
