@@ -123,3 +123,14 @@ button:hover, input[type="submit"]:hover{
         gap: 0.5rem;
     }
   }
+
+  @media (max-width: 500px) {
+    th{
+        font-size: xx-small !important;
+    }
+    .preguntas{
+        font-size: x-small;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
