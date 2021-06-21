@@ -133,4 +133,7 @@ button:hover, input[type="submit"]:hover{
         padding-left: 0px;
         padding-right: 0px;
     }
+    form{
+        padding: 0px;
+    }
 }
