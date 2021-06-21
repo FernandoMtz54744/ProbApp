@@ -18,21 +18,21 @@ const titulosGrafica = ["Me conecto a las redes sociales por lo menos una vez al
 const etiquetas = ['Totalmente de acuerdo','De acuerdo','Ni de acuerdo ni en desacuerdo','En desacuerdo','Totalmente en desacuerdo'];
 const colores = ['rgb(255, 99, 132)','rgb(54, 162, 235)','rgb(255, 112, 67)', 'rgb(255, 205, 0)','rgb(0, 188, 212)'];
 const datos = [
-    [21,8,4,1,0], //Pregunta 1
-    [10,10,6,6,2], //Pregunta 2
-    [8,18,6,1,1], //Pregunta 3
-    [3,8,10,11,2], //Pregunta 4
-    [6,11,6,8,3], //Pregunta 5
-    [5,5,12,8,4], //Pregunta 6
-    [4,11,8,10,1], //Pregunta 7
-    [2,9,10,8,5], //Pregunta 8
-    [0,10,16,5,3], //Pregunta 9
-    [4,5,11,8,6], //Pregunta 10
-    [2,9,9,9,4], //Pregunta 11
-    [7,10,11,4,2], //Pregunta 12
-    [1,7,12,11,3], //Pregunta 13
-    [8,10,13,2,1], //Pregunta 14
-    [16,13,3,1,1]
+    [61.76, 23.53,11.76,2.94,0.00], //Pregunta 1
+    [29.41,29.41,17.65,17.65,5.88], //Pregunta 2
+    [23.53,52.94, 17.65, 2.94,2.94], //Pregunta 3
+    [8.82,23.53, 29.41, 32.35,5.88], //Pregunta 4
+    [17.65,32.35,17.65,23.53,8.82], //Pregunta 5
+    [14.71,14.71,35.29,23.53,11.76], //Pregunta 6
+    [11.76,32.35,23.53,29.41,2.94], //Pregunta 7
+    [5.88,26.47,29.41,23.53,14.71], //Pregunta 8
+    [0.00,29.41,47.06,14.71,8.82], //Pregunta 9
+    [11.76,14.71,32.35,23.53,17.65], //Pregunta 10
+    [5.88,26.47,26.47,26.47,11.76], //Pregunta 11
+    [20.59,29.41,32.35,11.76,5.88], //Pregunta 12
+    [2.94,20.59,35.29,32.35,8.82], //Pregunta 13
+    [23.53,29.41,38.24,5.88,2.94], //Pregunta 14
+    [47.06,38.24,8.82,2.94,2.94]
 ];
 let currentChart;
 
