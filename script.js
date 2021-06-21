@@ -71,7 +71,6 @@ form.addEventListener('submit', (event)=>{
         resulatdosDiv.style.display="";
         let html = `<h2>Tus respuestas sugieren que tienes un perfil con '${Math.round(probabilidad)}'% probabilidad de ser depresivo/a</h2>`;
         datosUsuairio.innerHTML=html;
-
     }else{
         alert("Favor de contestar todas las respuestas");
     }

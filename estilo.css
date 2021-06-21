@@ -36,10 +36,13 @@ td{
     border-radius: 5px;
     text-align: center;
     padding: 0.2rem;
+    border: solid 2px #4a0072;
+    border-left: 0px;
+    border-right: 0px;
 }
 
 .preguntas{
-    padding: 0.5rem;
+    padding: 1rem;
     text-align: justify;
 }
 
@@ -90,3 +93,33 @@ button:hover, input[type="submit"]:hover{
     flex-direction: row;
     justify-content: center;
 }
+
+@media (max-width: 900px) {
+    *{
+        font-size: small;
+    }
+    td{
+        padding: 0px;
+    }
+    .preguntas{
+        padding: 1rem 0px 1rem 0px;
+        min-width: 20vw;
+        font-size: small;
+    }
+    th{
+        font-size: smaller;
+    }
+  }
+
+  @media (max-width: 1400px) {
+    .preguntas{
+        padding: 0.5rem;
+        text-align: justify;
+    }
+
+    .chart-selector{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.5rem;
+    }
+  }
